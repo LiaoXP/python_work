@@ -9,5 +9,10 @@ class NamesTestCase(unittest.TestCase):
         formatted_name = get_formatted_name("janis", "joplin")
 
         self.assertEqual(formatted_name, "Janis Joplin")
+    def test_first_last_middle_name(self):
+        """ can process name like Wolf Ama Mozart? """
 
+        formatted_name = get_formatted_name("wolf", "mozart", "ama")
+
+        self.assertEqual(formatted_name, "Wolf Ama Mozart")
 unittest.main()
