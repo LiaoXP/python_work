@@ -12,13 +12,13 @@ def partition(start, end):
     while True:
         while low <= high and list_1[high] >= pivot:
             high = high - 1
-        while low <= high and list_1[low] <= pivot:
+        while low <= high and list_1[low] <=pivot:
             low = low + 1
         if low <= high:
             list_1[low], list_1[high] = list_1[high], list_1[low]
         else:
             break
-    list_1[start], list_1[high] = list_1[high], list_1[start]
+    list_1[start], list[high] = list_1[high], list_1[start]
     return high
 
 def quick_sort(start, end):
@@ -28,8 +28,8 @@ def quick_sort(start, end):
     if start >= end:
         return
     part = partition(start, end)
-    quick_sort(start, part-1)
-    quick_sort(part+1, end)
+    quick_sort(start, part - 1)
+    quick_sort(part + 1, end)
 
 def generate_rand_list(max_size):
     new_list = []
