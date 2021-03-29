@@ -13,8 +13,9 @@ import time
 #     def pop(self):
 #         if self.is_empty():
 #             return "stack empty"
-#         return self.stack.pop(0)
-
+#         else:
+#             return self.stack.pop(0)
+    
 #     def peek(self):
 #         return self.stack[0]
 
@@ -31,15 +32,15 @@ import time
 # s_1 = Stack()
 # s_1.push("cat")
 # s_1.push("dog")
-# print(s_1.size())
 # print(s_1.peek())
+# print(s_1.size())
 # print(s_1.pop())
 # print(s_1.pop())
 # print(s_1.pop())
 
-# s_1.push("c")    
-# s_1.push("a") 
-# s_1.push("t") 
+# s_1.push("C")
+# s_1.push("a")
+# s_1.push("t")
 # s_1.reverse_string()
 
 
@@ -56,7 +57,8 @@ class Queue:
     def dequeue(self):
         if self.is_empty():
             return "queue empty"
-        return self.queue.pop()
+        else:
+            return self.queue.pop()
 
     def size(self):
         return len(self.queue)
@@ -66,8 +68,10 @@ class Queue:
             if len(self.queue) == 0:
                 break
             else:
-                print(f"{self.dequeue()} takes its turn")
+                print(f"{self.dequeue()} takes their turn")
                 time.sleep(3)
+
+print()
 q_1 = Queue()
 q_1.enqueue("cat")
 q_1.enqueue("dog")
@@ -76,6 +80,6 @@ print(q_1.dequeue())
 print(q_1.dequeue())
 print(q_1.dequeue())
 
-q_1.enqueue("cat")
-q_1.enqueue("dog")
+q_1.enqueue("Cat")
+q_1.enqueue("Dog")
 q_1.wait_your_turn()
