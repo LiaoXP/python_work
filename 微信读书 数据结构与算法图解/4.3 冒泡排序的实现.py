@@ -13,10 +13,22 @@ def bubble_sort(list):
 
     return list
 
+def bubble_sort2(list):
+    for i in range(1, len(list)):
+        print(i)
+        print(list)
+        for j in range(0, len(list) - i):
+            if list[j] > list[j + 1]:
+                list[j], list[j + 1] = list[j + 1], list[j]
+    
+    return list
+
 list = []
-for i in range(10):
+for i in range(5):
     list.append(random.randint(1, 1000))
 
-print(list)
-print(bubble_sort(list))
+#print(list)
+print(bubble_sort2(list))
+
+
 
