@@ -1,36 +1,36 @@
-# def square(num):
-#     return num**2
+def square(num):
+    return num**2
 
-# my_nums = [1,2,3,4,5]
+my_nums = [1,2,3,4,5]
 
-# lst = list(map(square, my_nums))
+lst = list(map(square, my_nums))
 
-# print(lst)
-
-
-
-# def splicer(mystring):
-#     if len(mystring) % 2 == 0:
-#         return "even"
-#     else:
-#         return mystring[0]
-
-# mynames = ['John','Cindy','Sarah','Kelly','Mike']
-
-# lst = list(map(splicer, mynames))
-
-# print(lst)
+print(lst)
 
 
 
-# def check_even(num):
-#     return num % 2 == 0
+def splicer(mystring):
+    if len(mystring) % 2 == 0:
+        return "even"
+    else:
+        return mystring[0]
 
-# nums = [0,1,2,3,4,5,6,7,8,9,10]
+mynames = ['John','Cindy','Sarah','Kelly','Mike']
 
-# print(filter(check_even, nums))
+lst = list(map(splicer, mynames))
 
-# print(list(filter(check_even, nums)))
+print(lst)
+
+
+
+def check_even(num):
+    return num % 2 == 0
+
+nums = [0,1,2,3,4,5,6,7,8,9,10]
+
+print(filter(check_even, nums))
+
+print(list(filter(check_even, nums)))
 
 
 
@@ -40,8 +40,12 @@ def square(num):
 
 print(square(6))
 
+square = lambda num: num ** 2
+print(square(4))
 
-print(lambda num: num ** 2)
+print(list(map(lambda num: num ** 2, my_nums)))
+
+print(list(filter(lambda n: n % 2 == 0, nums)))
 
 
 
