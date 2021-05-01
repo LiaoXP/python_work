@@ -243,13 +243,46 @@ def count_primes(num):
 
     # return count_prime
 
+    # primes = [2]
+    # x = 3
+
+    # if num < 2:
+    #     return 0
+    # while x <= num:
+    #     for y in range(3,x,2):
+    #         if x%y == 0:
+    #             x += 2
+    #             break
+    #     else:
+    #         primes.append(x)
+    #         x += 2
+    # print(primes)
+    # return len(primes)
+
     primes = [2]
+
     x = 3
 
     if num < 2:
         return 0
     while x <= num:
-        for y in range(3,x,2):
-            if x%y
+        for y in primes:
+            if x%y == 0:
+                x += 2
+                break
+        else:
+            primes.append(x)
+            x += 2
+    print(primes)
+    return len(primes)
 
-print(count_primes(0))
+print(count_primes(1000))
+
+
+def print_big(letter):
+    patterns = {1: "  *  ", 2: " * * ", 3: "*   *", 4: "*****", 5: "**** ", 6: "   * ", 7: " *   ", 8: "*  * ", 9: "*    "}
+    alphabet = {'A':[1,2,4,3,3],'B':[5,3,5,3,5],'C':[4,9,9,9,4],'D':[5,3,3,3,5],'E':[4,9,4,9,4]}
+    for pattern in alphabet[letter.upper()]:
+        print(patterns[pattern])
+
+print_big("b")
