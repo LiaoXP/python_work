@@ -1,5 +1,5 @@
 from math import pi
-
+import string
 def vol(rad):
     return 4/3 * pi * rad**3
 
@@ -55,4 +55,32 @@ def multiply(numbers):
 multiply([1,2,3,-4])
 
 
+def palindrome(s):
+    lst = list(s)
 
+    if len(lst) == 0:
+        print(False)
+    elif len(lst) == 1:
+        print(True)
+    else:
+        while len(lst) > 1:
+            if lst.pop(0) != lst.pop(len(lst) - 1):
+                print(False)
+                return
+        print(True)
+
+palindrome('helrjleh')
+palindrome('')
+palindrome('u')
+
+def ispangram(str1, alphabet=string.ascii_lowercase):
+    set_str = set(str1.replace(" ", ""))
+    set_alphabet = set(alphabet)
+
+    print(f"str: {set_str}")
+    print(f"alphabet: {set_alphabet}")
+
+    print(set_alphabet.issubset(set_str))
+
+
+ispangram("The quick brown fox jumps over the lazy dog")
