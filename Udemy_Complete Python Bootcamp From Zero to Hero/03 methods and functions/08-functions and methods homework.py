@@ -12,6 +12,11 @@ def ran_check(num, low, high):
         return True
     else:
         return False
+    
+    if num in range(low, high + 1):
+        return True
+    else:
+        return False
 
 print(ran_check(5,2,7))
 
@@ -28,6 +33,8 @@ def up_low(s):
             upper += 1
         elif c.islower():
             lower += 1
+        else:
+            pass
     
     print(f"original string : {original}")
     print(f"no. of upper case characters : {upper}")
@@ -69,6 +76,9 @@ def palindrome(s):
                 return
         print(True)
 
+    s = s.replace(" ", "")
+    return s == s[::-1]
+    
 palindrome('helrjleh')
 palindrome('')
 palindrome('u')
